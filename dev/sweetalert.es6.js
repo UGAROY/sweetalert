@@ -68,7 +68,6 @@ var sweetAlert, swal;
 sweetAlert = swal = function() {
   var customizations = arguments[0];
 
-  addClass(document.body, 'stop-scrolling');
   resetInput();
 
   /*
@@ -223,9 +222,6 @@ sweetAlert.close = swal.close = function() {
     var customClass = modal.getAttribute('data-custom-class');
     removeClass(modal, customClass);
   }, 300);
-
-  // Make page scrollable again
-  removeClass(document.body, 'stop-scrolling');
 
   // Reset the page to its previous state
   window.onkeydown = previousWindowKeyDown;
